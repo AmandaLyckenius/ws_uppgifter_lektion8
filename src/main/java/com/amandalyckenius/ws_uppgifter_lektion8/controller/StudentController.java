@@ -28,5 +28,10 @@ public class StudentController {
                 .body(saved);
     }
 
+    @GetMapping("/all")
+    public List<Student> getAll() {
+        return repo.findAll();
+    }
+
 
 }
